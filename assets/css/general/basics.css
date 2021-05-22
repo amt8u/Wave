@@ -1,12 +1,19 @@
 :root {
     --brand-color: var(--ghost-accent-color, #fc7e0f);
-    --primary-text-color: #5a656b;
-    --secondary-text-color: #aaa;
-    --white-color: #fff;
+    /* --primary-text-color: #5a656b; */
+    --primary-text-color: #ddd;
+    --header-text-color: #fff;
+    --primary-link-color: #fff;
+    /* --secondary-text-color: #aaa; */
+    --secondary-text-color: #ccc;
+    --background-color:#111;
+    /* --white-color: #fff; */
+    --white-color: #1b1b1b;
     --light-gray-color: #f6f6f6;
     --mid-gray-color: #e6e6e6;
     --dark-gray-color: #a8aab1;
-    --darker-gray-color: #1a1a1a;
+    /* --darker-gray-color: #1a1a1a; */
+    --darker-gray-color: #eeecec;
     --black-color: #000;
     --animation-base: ease-in-out;
     --font-base: ubuntu, -apple-system, blinkmacsystemfont, segoe ui, helvetica, arial, sans-serif;
@@ -17,6 +24,15 @@ html {
     box-sizing: border-box;
 }
 
+#medium-zoom-container {
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 *,
 *::before,
 *::after {
@@ -24,19 +40,19 @@ html {
 }
 
 body {
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
     font-family: var(--font-base);
     font-size: 14px;
     line-height: 1.7;
     text-rendering: optimizeLegibility;
     word-break: break-word;
-    background-color: var(--white-color);
+    background-color: var(--background-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-    color: var(--darker-gray-color);
+    color: var(--primary-link-color);
     text-decoration: none;
     transition: color 0.1s var(--animation-base);
 }
@@ -52,7 +68,7 @@ h4,
 h5,
 h6 {
     margin: 0 0 15px;
-    color: var(--darker-gray-color);
+    color: var(--header-text-color);
     line-height: 1.3;
     font-weight: 500;
 }
@@ -68,12 +84,13 @@ img {
 }
 
 blockquote {
-    margin-right: 60px;
-    margin-left: 60px;
-    color: var(--secondary-text-color);
-    font-size: 22px;
+    color: #828282;
+    /* font-size: 22px; */
+    /* font-weight: 500; */
     line-height: 1.45;
-    font-weight: 500;
+    margin-left: 60px;
+    font-style: italic;
+    margin-right: 60px;
 }
 
 blockquote strong {
@@ -106,11 +123,15 @@ figcaption {
 }
 
 pre {
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
-code {
+code:not(pre *) {
     font-size: 14px;
+    background-color: #1a1a1a;
+    border-radius: .3em;
+    padding: 5px 10px;
+    color: #cbbfa2;
 }
 
 hr {

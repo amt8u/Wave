@@ -1,4 +1,5 @@
 var body = $('body');
+var testVar = "hoopla";
 
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.loadHidden = false;
@@ -9,6 +10,22 @@ document.addEventListener('lazyloaded', function (e) {
         $(e.target).parent().addClass('initialized');
     }
 });
+
+function managePostImages(){
+    $('.post-content').find('img').each(function () {
+      if (
+        !$(this).closest('figure').hasClass('kg-bookmark-card') &&
+        !$(this).parent().is('a')
+      ) {
+        $(this).addClass('js-zoomable')
+      }
+    })
+  }
+
+// Add special class to zoomable images
+managePostImages();
+// Call medium zoom library on all imgs within post-content
+mediumZoom('.js-zoomable', { container: "#medium-zoom-container", background: '#111', scrollOffset: 100 });
 
 $(function () {
     'use strict';

@@ -1,7 +1,12 @@
 <footer class="site-footer container medium">
-    {{> customize/subscribe}}
+    {{!-- {{> customize/subscribe}} --}}
+    <nav class="footer-nav">
+        {{navigation type="secondary"}}
+        {{!-- <a class="menu-item badge" href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Published with Ghost</a> --}}
+    </nav>
     <div class="copyright">
-        Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
+        {{!-- Powered by <a href="https://ghost.org/" target="_blank">Ghost</a> --}}
+        {{@site.title}} © {{date format="YYYY"}}
     </div>
 </footer>
 

@@ -3,6 +3,7 @@
 <div class="content-area">
     <main class="site-main">
         {{#post}}
+            <div id="medium-zoom-container"></div>
             <article class="{{post_class}} single">
                 <div class="single-media container medium{{#if og_description}} hidden-md hidden-lg hidden-xl{{/if}}">
                     {{> post-media ratio="square"}}
@@ -30,6 +31,18 @@
                         {{/foreach}}
                     </div>
                 </div>
+
+            <section class="post-full-comments">
+                <div id="hyvor-talk-view"></div>
+            </section>
+            <script type="text/javascript">
+                var HYVOR_TALK_WEBSITE = 1130; // DO NOT CHANGE THIS
+                var HYVOR_TALK_CONFIG = {
+                    url: "{{url absolute="true"}}",
+                    id: "ghost-{{comment_id}}"
+                };
+            </script>
+            <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
             </article>
         {{/post}}
     </main>

@@ -11,10 +11,12 @@
         {{^if feature_image}}
             <span class="letter">{{title}}</span>
         {{/if}}
+        <a href="{{url}}">
         <img class="post-image lazyload u-object-fit" {{#if feature_image}}
             data-srcset="{{img_url feature_image size="1x"}} 1x, {{img_url feature_image size="2x"}} 2x, {{img_url feature_image size="3x"}} 3x"
             {{/if}}
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
             data-sizes="auto" alt="{{title}}">
+        </a>
     </div>
 </div>

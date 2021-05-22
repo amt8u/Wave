@@ -6,7 +6,7 @@
     height: 36px;
     outline: none;
     border: 0;
-    color: var(--white-color);
+    color: var(--primary-text-color);
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
@@ -16,7 +16,7 @@
 }
 
 .button-secondary {
-    background-color: var(--dark-gray-color);
+    background-color: var(--white-color);
 }
 
 .button-small {

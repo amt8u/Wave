@@ -14,7 +14,7 @@
 .author {
     display: flex;
     padding: 30px 30px;
-    background-color: var(--light-gray-color);
+    background-color: var(--black-color);
     border-radius: 3px;
 }
 
